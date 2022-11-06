@@ -23,6 +23,10 @@ a {
   color: var(--dark-color);
 }
 
+canvas {
+  opacity: 10%;
+}
+
 .navbar {
   width: 100%;
 }
