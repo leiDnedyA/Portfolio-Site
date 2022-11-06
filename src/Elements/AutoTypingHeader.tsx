@@ -9,46 +9,52 @@ interface Props {
 interface State {
     textIndex: number;
     currentText: string;
+    finished: boolean;
+    loadingDotsCount: number;
 }
 
-// export default (props: Props): JSX.Element => {
-//     const [index, setIndex] = useState(0);
-    
-//     const fullText: string = props.text;
-//     const typingDelay = .25;
-
-//     useEffect(() => {
-
-//         const update = setInterval(() => {
-//             setIndex(prevIndex => {
-//                 if (prevIndex < fullText.length - 1) {
-//                     return prevIndex + 1;
-//                 }
-//                 return prevIndex;
-//             });
-//         }, 1000 * typingDelay);
-
-//     }, []);
-
-//     return <h1 className={props.className}> {fullText.slice(0, index)} </h1>
-// }
-
 export default class AutoTypingHeader extends React.Component<Props, State>{
-    
-    state = { textIndex: 0, currentText: ''}; //current index that the text is being typed to
+
+    state = { textIndex: 0, currentText: '', finished: false, loadingDotsCount: 0}; //current index that the text is being typed to
     interval: any = null;
 
-    constructor(props: Props){
+    minLoadingDots = 1;
+    maxLoadingDots = 3;
+    typingDelay = 50;
+    dotsDelay = 500;
+
+    constructor(props: Props) {
         super(props);
     }
 
     componentDidMount(): void {
-        this.interval = setInterval(()=>{
-            if(this.state.textIndex < this.props.text.length){
-                this.setState({ textIndex: this.state.textIndex + 1 })
+        this.interval = setInterval(() => {
+            if (!this.state.finished){
+                if (this.state.textIndex < this.props.text.length) {
+                    this.setState({ textIndex: this.state.textIndex + 1 })
+                }
+                if (this.state.textIndex == this.props.text.length) {
+                    this.setState({ finished: true });
+                }
+            }else{
+                clearInterval(this.interval);
+                this.interval = setInterval(()=>{
+                    if (this.state.loadingDotsCount >= this.maxLoadingDots) {
+                        this.setState({ loadingDotsCount: this.minLoadingDots });
+                    } else {
+                        this.setState({ loadingDotsCount: this.state.loadingDotsCount + 1 });
+                    }
+
+                    let loadingDots = '.'.repeat(this.state.loadingDotsCount);
+                    
+                    this.setState({ currentText: this.props.text + loadingDots });
+        
+                }, this.dotsDelay);
             }
-            this.setState({ currentText: this.props.text.slice(0, this.state.textIndex) } );
-        }, 100);
+            let newText = this.props.text.slice(0, this.state.textIndex)
+            this.setState({ currentText: newText});
+
+        }, this.typingDelay);
     }
 
     componentWillUnmount(): void {
