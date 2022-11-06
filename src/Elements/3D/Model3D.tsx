@@ -54,14 +54,14 @@ export default class Model3D extends React.Component<MyProps>{
 
         //renderer
         this.renderer = new THREE.WebGLRenderer( {alpha: true} );
-        this.renderer.setSize(500, 500);
+        this.renderer.setSize(this.divRef.current.offsetWidth, this.divRef.current.offsetHeight);
         this.renderer.setClearColor(0xbb6700, 0);
 
         //add renderer to DOM
         this.divRef.current.appendChild(this.renderer.domElement);
 
         //camera
-        this.camera = new THREE.PerspectiveCamera(75, 500 / 500, 0.1, 1000);
+        this.camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
         this.camera.position.z = 1.5;
 
         //light
@@ -103,6 +103,13 @@ export default class Model3D extends React.Component<MyProps>{
         this.hasMounted = true;
 
         this.animation();
+
+        window.addEventListener('resize', this.handleResize);
+
+    }
+
+    componentWillUnmount(): void {
+        window.removeEventListener('resize', this.handleResize);
     }
 
     public animation = (): void => {
@@ -120,6 +127,10 @@ export default class Model3D extends React.Component<MyProps>{
 
     public onMouseOut = (): void => {
         this.speed = 1;
+    }
+
+    public handleResize = (): void => {
+        
     }
 
     render() {

@@ -22,7 +22,7 @@ export default (): JSX.Element => {
             <div className="floating-head-container">
                 <div className="media-and-description-container">
                     <div className='media media-grid-item semi-transparent'>
-                        <Model3D width="500px" height="500px" />
+                        <Model3D width="100%" height="100%" />
                     </div>
                     <p className="subtitle-text media-description media-description-grid-item">
                         Yes, this is a 3d model of my head.
