@@ -9,7 +9,7 @@ export default (): JSX.Element => {
         <div className="home-main">
             <div className="home-header">
                 <AutoTypingHeader className="header home-header-header" text="Hi, I'm Ayden" />
-                <SocialLinks className="home-socials" />
+                {/* <SocialLinks className="home-socials" /> */}
                 <p className="home-bio">I'm a frontend web developer living in Boston, MA. I'm currently a CS undergrad student at UMass Boston.</p>
             </div>
         </div>
