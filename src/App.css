@@ -36,12 +36,14 @@ a {
   width: 60%;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px){ /* Media query for homepage layout */
+
   .home {
     grid-template-rows: auto;
     grid-template-columns: auto;
     grid-template-areas: "main";
   }
+
   .home-sidebar {
     display: none;
   }
@@ -62,7 +64,12 @@ a {
 .home-header {
   display: grid;
   width: 100%;
-  grid-template-areas: "header header socials" "bio bio bio";
+  grid-template-columns: 50% 25% 25%;
+  grid-template-areas: 
+    "header header socials"
+    "bio bio bio"
+    "body body body";
+  padding: 10px;
 }
 
 .home-header-header {
@@ -71,6 +78,12 @@ a {
   margin: 0;
   margin-bottom: .25em;
   font-family: 'Bebas Neue', cursive;
+}
+
+@media (max-width: 200px){
+  .home-header-header {
+    font-size: 1.5em;
+  }
 }
 
 .home-bio {
@@ -83,6 +96,10 @@ a {
   font-size: 1.5em;
   justify-self: right;
   margin: 0;
+}
+
+.home-body-content {
+  grid-area: body;
 }
 
 .canvas-container {
@@ -99,7 +116,7 @@ a {
 .media-and-description-container {
   display: grid;
   grid-template-areas: "media media" "description description";
-  background-color: var(--dark-color);
+  /* background-color: var(--dark-color); */
 
 }
 
