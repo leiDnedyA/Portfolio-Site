@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react"
 
-interface Props {
-    className: string;
+interface Props{
+    className?: string;
     text: string;
 }
 
@@ -28,30 +28,42 @@ export default class AutoTypingHeader extends React.Component<Props, State>{
     }
 
     componentDidMount(): void {
+        let fullText = this.props.text
+        
+        const updateTypedText = () => {
+            
+            if (this.state.textIndex < fullText.length) {
+                this.setState({ textIndex: this.state.textIndex + 1 })
+            }
+            if (this.state.textIndex == fullText.length) {
+                this.setState({ finished: true });
+            }
+
+        }
+
+        const updateDots = () => {
+
+            if (this.state.loadingDotsCount >= this.maxLoadingDots) {
+                this.setState({ loadingDotsCount: this.minLoadingDots });
+            } else {
+                this.setState({ loadingDotsCount: this.state.loadingDotsCount + 1 });
+            }
+
+            let loadingDots = '.'.repeat(this.state.loadingDotsCount);
+            
+            this.setState({ currentText: fullText + loadingDots });
+        
+        }
+
         this.interval = setInterval(() => {
             if (!this.state.finished){
-                if (this.state.textIndex < this.props.text.length) {
-                    this.setState({ textIndex: this.state.textIndex + 1 })
-                }
-                if (this.state.textIndex == this.props.text.length) {
-                    this.setState({ finished: true });
-                }
+                updateTypedText();
             }else{
                 clearInterval(this.interval);
-                this.interval = setInterval(()=>{
-                    if (this.state.loadingDotsCount >= this.maxLoadingDots) {
-                        this.setState({ loadingDotsCount: this.minLoadingDots });
-                    } else {
-                        this.setState({ loadingDotsCount: this.state.loadingDotsCount + 1 });
-                    }
-
-                    let loadingDots = '.'.repeat(this.state.loadingDotsCount);
-                    
-                    this.setState({ currentText: this.props.text + loadingDots });
-        
-                }, this.dotsDelay);
+                updateDots();
+                this.interval = setInterval(updateDots, this.dotsDelay);
             }
-            let newText = this.props.text.slice(0, this.state.textIndex)
+            let newText = fullText.slice(0, this.state.textIndex)
             this.setState({ currentText: newText});
 
         }, this.typingDelay);
@@ -62,7 +74,7 @@ export default class AutoTypingHeader extends React.Component<Props, State>{
     }
 
     render(): JSX.Element {
-        return <h1 className={this.props.className}>{this.state.currentText}</h1>
+        return <h1 className={this.props.className ? this.props.className : '' /* becasue className is optional */}>{this.state.currentText}</h1>
     }
 
 }
