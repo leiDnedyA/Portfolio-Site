@@ -3,8 +3,7 @@ import SocialLinks from "../Elements/SocialLinks"
 
 
 export default (): JSX.Element => {
-    return <div>
+    return <div className="contact-page">
         <AutoTypingHeader text="Contact Me"/>
-        <SocialLinks />
     </div>
 }
