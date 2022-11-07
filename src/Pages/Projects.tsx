@@ -1,5 +1,8 @@
+import AutoTypingHeader from "../Elements/AutoTypingHeader"
 
 
 export default (): JSX.Element =>{
-    return <div>Projects route...</div>
+    return <div className="projects">
+        <AutoTypingHeader text="My Projects"/>
+    </div>
 }
