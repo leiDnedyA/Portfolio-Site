@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
 
@@ -10,6 +8,8 @@
   --midtone-color: #e0c55a;
 }
 
+
+/* Direct element styling */
 body {
   margin: 0;
   background-color: var(--light-color);
@@ -18,8 +18,32 @@ body {
 
 a {
   color: var(--dark-color-accent);
+  text-decoration: none;
+  font-weight: bold;
 }
 
+
+/* Generic styles */
+.subtitle-text {
+  margin: 0;
+  padding: 5px;
+  font-style: italic;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: .8em;
+}
+
+.generic-header-h2 {
+  font-size: 2em;
+}
+
+a.no-bold {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+
+/* Styles related to the the <App/> element's direct children, and generic custom elements */
 .App {
   display: flex;
   flex-wrap: wrap;
@@ -37,11 +61,24 @@ a {
   padding: 10px;
 }
 
+.social-links {
+  font-size: 1em;
+  display: inline;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .header {
-  /* text-transform: lowercase; */
   font-weight: 600;
 }
 
+/* Styles related to the <Home /> page */
 .home {
   margin: 25px;
   display: grid;
@@ -106,7 +143,6 @@ a {
 
 .home-socials {
   grid-area: socials;
-  font-size: 1.5em;
   justify-self: right;
   margin: 0;
 }
@@ -141,15 +177,5 @@ a {
   grid-area: description;
 }
 
-.subtitle-text {
-  margin: 0;
-  padding: 5px;
-  font-style: italic;
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  font-size: .8em;
-}
+/* Styles related to the <Projects /> page */
 
-.generic-header-h2 {
-  font-size: 2em;
-}
