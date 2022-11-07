@@ -179,3 +179,24 @@ a.no-bold {
 
 /* Styles related to the <Projects /> page */
 
+.projects {
+  display: grid;
+  margin: 10px;
+}
+
+.projects-header {
+  align-self: center;
+  display: grid;
+  grid-template-areas: "header" "description";
+  align-items: center;
+}
+
+.projects-header-header {
+  align-self: center;
+  grid-area: header;
+  margin-bottom: 0px;
+}
+
+.projects-header-description {
+  grid-area: description
+}
