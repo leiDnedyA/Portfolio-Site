@@ -1,6 +1,25 @@
+import { Link } from "react-router-dom";
 
-export default (): JSX.Element => {
+interface LinkObject {
+    label: string;
+    destination: string;
+}
+
+interface Props {
+    links: Array<LinkObject>;
+}
+
+export default (props: Props): JSX.Element => {
+    
+    const linkElements = [];
+
+    for(let i in props.links){
+        let linkObj = props.links[i]
+        let link = <Link className="navbar-link" to={linkObj.destination}>{linkObj.label}</Link>
+        linkElements.push(link);
+    }
+    
     return <div className="navbar">
-        Navbar
+        {linkElements}
     </div>
 }

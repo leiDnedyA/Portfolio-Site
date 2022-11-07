@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
   --dark-color: #bb6700;
@@ -10,7 +13,7 @@
 body {
   margin: 0;
   background-color: var(--light-color);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -22,10 +25,21 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   color: var(--dark-color);
+  align-items: center;
 }
 
 .navbar {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1em;
+  padding: 10px;
+}
+
+.header {
+  /* text-transform: lowercase; */
+  font-weight: 600;
 }
 
 .home {
@@ -33,7 +47,7 @@ a {
   display: grid;
   grid-template-columns: auto 20%;
   grid-template-areas: "main sidebar";
-  width: 60%;
+  width: 60%;;
 }
 
 @media (max-width: 800px){ /* Media query for homepage layout */
@@ -77,7 +91,6 @@ a {
   font-size: 3em;
   margin: 0;
   margin-bottom: .25em;
-  font-family: 'Bebas Neue', cursive;
 }
 
 @media (max-width: 200px){
@@ -135,4 +148,8 @@ a {
   background-color: var(--light-color);
   color: var(--dark-color);
   font-size: .8em;
+}
+
+.generic-header-h2 {
+  font-size: 2em;
 }
