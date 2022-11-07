@@ -7,6 +7,7 @@ interface LinkObject {
 
 interface Props {
     links: Array<LinkObject>;
+    className?: string;
 }
 
 export default (props: Props): JSX.Element => {
@@ -19,7 +20,7 @@ export default (props: Props): JSX.Element => {
         linkElements.push(link);
     }
     
-    return <div className="navbar">
+    return <div className={`navbar${props.className ? ' ' + props.className : ''}`}>
         {linkElements}
     </div>
 }
