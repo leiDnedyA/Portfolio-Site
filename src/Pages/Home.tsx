@@ -18,7 +18,7 @@ export default (): JSX.Element => {
                 </div>
         </div>
         <div className="home-sidebar">
-            <div className="floating-head-container">
+            {/* <div className="floating-head-container">
                 <div className="media-and-description-container">
                     <div className='media media-grid-item semi-transparent'>
                         <Model3D width="100%" height="100%" />
@@ -27,7 +27,7 @@ export default (): JSX.Element => {
                         Yes, this is a 3d model of my head.
                     </p>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     </div>

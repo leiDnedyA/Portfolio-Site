@@ -1,3 +1,4 @@
+import './Navbar.css'
 import { Link } from "react-router-dom";
 
 interface LinkObject {
@@ -16,7 +17,7 @@ export default (props: Props): JSX.Element => {
 
     for(let i in props.links){
         let linkObj = props.links[i]
-        let link = <Link className="navbar-link" key={`navbar-link-${i}`} to={linkObj.destination}>{linkObj.label}</Link>
+        let link = <Link className="navbar-link nav-hover-animation" key={`navbar-link-${i}`} to={linkObj.destination}>{linkObj.label}</Link>
         linkElements.push(link);
     }
     

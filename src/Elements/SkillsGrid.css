@@ -1,0 +1,42 @@
+.SkillsGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.skill-grid-item {
+    margin: 5px;
+    background-color: var(--midtone-color);
+    color: var(--light-color);
+    padding: 5px;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-grid-label {
+    margin: 0;
+    font-size: large;
+}
+
+.skill-grid-icon {
+    margin: 0;
+    font-size: xx-large;
+    color: var(--dark-color);
+}
+
+.hover-animation {
+    background: linear-gradient(to right, var(--dark-color), var(--dark-color) 50%, var(--light-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.hover-animation:hover {
+    background-position: 0 100%;
+}

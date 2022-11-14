@@ -1,0 +1,14 @@
+
+.nav-hover-animation {
+    background: linear-gradient(to left, var(--dark-color-accent), var(--dark-color-accent) 50%, var(--dark-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.nav-hover-animation:hover {
+    background-position: 0 100%;
+}
