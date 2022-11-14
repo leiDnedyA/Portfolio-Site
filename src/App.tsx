@@ -20,9 +20,6 @@ function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
-      <div className="footer">
-         <a href="mailto: aydendiel@gmail.com">aydendiel@gmail.com</a> <SocialLinks />
-      </div>
     </div>
   );
 }

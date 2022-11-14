@@ -78,6 +78,10 @@ a.no-bold {
   font-weight: 600;
 }
 
+.subheader {
+  font-weight: 600;
+}
+
 /* Styles related to the <Home /> page */
 .home {
   margin: 25px;
@@ -105,6 +109,7 @@ a.no-bold {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   grid-area: main;
 }
 
@@ -130,7 +135,7 @@ a.no-bold {
   margin-bottom: .25em;
 }
 
-@media (max-width: 200px){
+@media (max-width: 1000px){
   .home-header-header {
     font-size: 1.5em;
   }
@@ -159,7 +164,7 @@ a.no-bold {
 }
 
 .semi-transparent {
-  opacity: 40%;
+  opacity: 60%;
 }
 
 .media-and-description-container {
