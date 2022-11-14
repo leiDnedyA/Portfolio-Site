@@ -28,7 +28,7 @@
 }
 
 .hover-animation {
-    background: linear-gradient(to right, var(--dark-color), var(--dark-color) 50%, var(--light-color) 50%);
+    background: linear-gradient(to right, var(--light-color), var(--light-color) 50%, var(--dark-color) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,4 +39,5 @@
 
 .hover-animation:hover {
     background-position: 0 100%;
+    cursor: default;
 }

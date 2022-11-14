@@ -1,6 +1,6 @@
 
 .nav-hover-animation {
-    background: linear-gradient(to left, var(--dark-color-accent), var(--dark-color-accent) 50%, var(--dark-color) 50%);
+    background: linear-gradient(to right, var(--dark-color-accent), var(--dark-color-accent) 50%, var(--dark-color) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
