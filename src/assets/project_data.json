@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Interactive Exoplanet Predictor",
+        "imageSrc": "https://i.giphy.com/media/sKIkl2ERPk7vKhhq5E/giphy.webp",
+        "description": "Interactive Exoplanet Predictor uses machine learning to predict the number of exoplanets that a star would have based on several variables, including radius, surface gravity, age, temperature, etc. We are currently working on developing an interface that generates an interactive 3D model of the star system that can be updated and navigated in realtime by the user.",
+        "links": ["https://github.com/leiDnedyA/interactive-exoplanet-predictor"]
+    },
+    {
+        "title": "HTML5 Platformer",
+        "imageSrc": "https://media1.giphy.com/media/FWwWy2flhYxNG6uvPl/giphy.gif?cid=790b7611e2299670a9239a3c3cc23e6ec5848189df7aa131&rid=giphy.gif&ct=g",
+        "description": "This is a platformer ",
+        "links": []
+    }
+]
