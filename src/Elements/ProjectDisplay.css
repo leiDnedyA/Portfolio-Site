@@ -1,0 +1,53 @@
+
+.ProjectDisplay {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px auto auto auto;
+    grid-template-areas: 
+    "header image image"
+    "description image image"
+    "description image image"
+    "links links links"
+    ;
+    margin: 10px;
+    padding: 15px;
+    background-color: var(--midtone-color);
+    color: var(--light-color);
+}
+
+.align-img-left {
+    grid-template-areas:
+    "image image header"
+    "image image description"
+    "image image description"
+    "links links links"
+    ;
+}
+
+.ProjectDisplay > h2 {
+    grid-area: header;
+    padding: 0;
+    margin: 0;
+}
+
+.ProjectDisplay > p {
+    grid-area: description;
+    padding: 0;
+    margin: 0;
+    justify-self: top;
+}
+
+.ProjectDisplay > img {
+    grid-area: image;
+    width: 400px;
+}
+
+.ProjectDisplay > .links {
+    grid-area: links;
+}
+
+@media (max-width: 1000px){
+    .ProjectDisplay > img {
+        width: 200px;
+    }
+}

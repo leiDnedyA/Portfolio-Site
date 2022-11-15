@@ -88,24 +88,12 @@ a.no-bold {
 
 /* Styles related to the <Home /> page */
 .home {
-  margin: 25px;
-  display: grid;
-  grid-template-columns: auto 20%;
-  grid-template-areas: "main sidebar";
-  width: 60%;;
-}
-
-@media (max-width: 800px){ /* Media query for homepage layout */
-
-  .home {
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    grid-template-areas: "main";
-  }
-
-  .home-sidebar {
-    display: none;
-  }
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: main;
 }
 
 .home-main {
@@ -117,10 +105,6 @@ a.no-bold {
   grid-area: main;
 }
 
-.home-sidebar {
-  grid-area: sidebar;
-}
-
 .home-header {
   display: grid;
   width: 100%;
@@ -129,7 +113,6 @@ a.no-bold {
     "header header socials"
     "bio bio bio"
     "body body body";
-  padding: 10px;
 }
 
 .home-header-header {
@@ -140,9 +123,15 @@ a.no-bold {
 }
 
 @media (max-width: 1000px){
-  .home-header-header {
-    font-size: 1.5em;
+  
+  .home {
+    width: 85%;
   }
+
+  .home-header-header {
+    font-size: 2em;
+  }
+
 }
 
 .home-bio {

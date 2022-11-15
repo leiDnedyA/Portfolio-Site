@@ -1,0 +1,16 @@
+
+.Projects {
+    width: 60%;
+    display: grid;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1000px){
+    .Projects {
+        width: 85%;
+    }
+}
