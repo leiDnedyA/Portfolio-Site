@@ -9,7 +9,7 @@ interface Props{
 }
 
 const ProjectDisplay = (props: Props): JSX.Element => {
-    return <div className={"ProjectDisplay" + (props.alignImageLeft? ' align-img-left' : '')}>
+    return <div className={"ProjectDisplay " + (props.alignImageLeft? 'align-img-left' : 'align-img-right')}>
         <h2 className='hover-animation'>{props.title}</h2>
         <p>{props.description}</p>
         <img src={props.imageSRC}/>

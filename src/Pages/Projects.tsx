@@ -20,8 +20,8 @@ export default (props: Props): JSX.Element => {
             <p className="projects-header-description">Psssttt... Check out <a className="no-bold" href="">my GitHub profile</a>! Here are a few of the projects I've worked on over the past couple years.</p>
         </div>
         <div className="projects-container">
-            {props.projectsList.map(p => (
-                <ProjectDisplay title={p.title} imageSRC={p.imageSrc}
+            {props.projectsList.map((p, i) => (
+                <ProjectDisplay title={p.title} alignImageLeft={i%2 == 0} imageSRC={p.imageSrc}
                     description={p.description} links={p.links} />
             ))}
         </div>

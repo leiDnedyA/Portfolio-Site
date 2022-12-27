@@ -1,8 +1,8 @@
 
 .ProjectDisplay {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 50px auto auto auto;
+    grid-template-rows: 70px auto auto auto;
+    grid-template-columns: auto min-content min-content ;
     grid-template-areas: 
     "header image image"
     "description image image"
@@ -14,15 +14,21 @@
     background-color: var(--midtone-color);
     color: var(--dark-color);
     column-gap: 10px;
+    width: 100%;
 }
 
 .align-img-left {
+    grid-template-columns: auto auto auto;
     grid-template-areas:
     "image image header"
     "image image description"
     "image image description"
     "links links links"
     ;
+}
+
+.align-img-right > img{
+    align-self: end;
 }
 
 .ProjectDisplay > h2 {
@@ -47,7 +53,7 @@
     grid-area: links;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1116px){
     .ProjectDisplay > img {
         width: 200px;
     }
