@@ -1,6 +1,5 @@
 
 .ResumeButton {
-  margin: 10px;
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -11,4 +10,14 @@
 
 .ResumeButton > button {
   padding: 10px;
+  font-weight: bold;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  border-radius: 3px;
+  transition: background-color 200ms ease-out 50ms;
+}
+
+.ResumeButton > button:hover {
+  background-color: var(--dark-color-accent);
 }

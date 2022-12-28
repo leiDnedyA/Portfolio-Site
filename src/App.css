@@ -21,9 +21,14 @@ body {
 }
 
 a {
-  color: var(--dark-color-accent);
+  color: var(--dark-color);
   text-decoration: none;
   font-weight: bold;
+  transition: color 200ms ease-out 50ms;
+}
+
+a:hover {
+  color: var(--dark-color-accent)
 }
 
 
