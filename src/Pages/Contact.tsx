@@ -1,13 +1,13 @@
+import './Contact.css';
 import AutoTypingHeader from "../Elements/AutoTypingHeader"
-import SocialLinks from "../Elements/SocialLinks"
-
+import ContactInfo from '../Elements/ContactInfo';
+import ResumeButton from '../Elements/ResumeButton';
 
 export default (): JSX.Element => {
-    return <div className="contact-page">
+    return <div className="Contact">
         <AutoTypingHeader text="Contact Me" />
-
-        <div className="footer">
-            <a href="mailto: aydendiel@gmail.com">aydendiel@gmail.com</a> <SocialLinks />
-        </div>
+        <p className="contact-page-body">Let's get in touch! I'm actively searching for work, so if you have any opportunities that you think would fit my skillset, shoot me an email and I'll get back to you ASAP.</p>
+        <ContactInfo/>
+        <ResumeButton/>
     </div>
 }

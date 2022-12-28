@@ -54,6 +54,7 @@ a.no-bold {
   justify-content: center;
   color: var(--dark-color);
   align-items: center;
+  flex-direction: column;
 }
 
 .navbar {
@@ -68,14 +69,6 @@ a.no-bold {
 .social-links {
   font-size: 1em;
   display: inline;
-}
-
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 }
 
 .header {
