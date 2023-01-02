@@ -1,5 +1,13 @@
 [
     {
+        "title": "Fullstack Blog Web-App",
+        "imageSrc": "https://media3.giphy.com/media/5J7Kry5T8qhq6oJWqM/giphy.gif?cid=790b76115b2ecbd756e93dc443f9d5e1b4db19e9cef1ec66&rid=giphy.gif&ct=g",
+        "description": "Blog app which allows readers to browse through posts stored in a Google Firebase Database, and allows admins to log in, write new posts, and delete old posts. The app's frontend is written in React.js using create-react-app, the backend is written in Node.js, and I used Google Firebase for the database.",
+        "links": [
+            "https://github.com/leiDnedyA/React-Blog"
+        ]
+    },
+    {
         "title": "Interactive Exoplanet Predictor",
         "imageSrc": "https://i.giphy.com/media/sKIkl2ERPk7vKhhq5E/giphy.webp",
         "description": "Interactive Exoplanet Predictor uses machine learning to predict the number of exoplanets that a star would have based on several variables, including radius, surface gravity, age, temperature, etc. A 3D model of the predicted star system is generated based on each new set of inputs.",
