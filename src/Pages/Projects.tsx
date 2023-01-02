@@ -1,6 +1,8 @@
 import './Projects.css';
 import AutoTypingHeader from "../Elements/AutoTypingHeader"
 import ProjectDisplay from "../Elements/ProjectDisplay"
+import LinkButton from '../Elements/LinkButton';
+import { SiGithub } from 'react-icons/si';
 
 interface Project {
     title: string;
@@ -25,5 +27,6 @@ export default (props: Props): JSX.Element => {
                     description={p.description} links={p.links} />
             ))}
         </div>
+        <LinkButton text={<div>Check out my GitHub page! <SiGithub /></div>} link="https://github.com/leiDnedyA"/>
     </div>
 }
