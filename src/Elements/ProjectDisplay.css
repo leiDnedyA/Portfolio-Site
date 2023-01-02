@@ -1,7 +1,7 @@
 
 .ProjectDisplay {
     display: grid;
-    grid-template-rows: 70px auto auto auto;
+    grid-template-rows: 50px auto auto auto;
     grid-template-columns: auto min-content min-content ;
     grid-template-areas: 
     "header image image"
@@ -50,6 +50,7 @@
 }
 
 .ProjectDisplay > .links {
+    margin-top: 10px;
     grid-area: links;
 }
 
