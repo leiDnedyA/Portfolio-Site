@@ -1,7 +1,11 @@
-
 .Projects {
     width: 60%;
     display: grid;
+    padding: 0;
+}
+
+.projects-header {
+    padding: 0 10px 0 10px;
 }
 
 .projects-container {
@@ -9,8 +13,28 @@
     flex-direction: column;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
     .Projects {
         width: 85%;
+    }
+}
+
+@media (max-width: 650px) {
+    .Projects {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 1em;
+        padding: 10px;
+    }
+
+    .projects-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        column-gap: 1em;
     }
 }

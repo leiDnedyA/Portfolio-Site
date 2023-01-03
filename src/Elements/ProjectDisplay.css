@@ -1,13 +1,12 @@
-
 .ProjectDisplay {
     display: grid;
     grid-template-rows: 50px auto auto auto;
-    grid-template-columns: auto min-content min-content ;
-    grid-template-areas: 
-    "header image image"
-    "description image image"
-    "description image image"
-    "links links links"
+    grid-template-columns: auto min-content min-content;
+    grid-template-areas:
+        "header image image"
+        "description image image"
+        "description image image"
+        "links links links"
     ;
     margin: 10px;
     padding: 15px;
@@ -20,42 +19,73 @@
 .align-img-left {
     grid-template-columns: auto auto auto;
     grid-template-areas:
-    "image image header"
-    "image image description"
-    "image image description"
-    "links links links"
+        "image image header"
+        "image image description"
+        "image image description"
+        "links links links"
     ;
 }
 
-.align-img-right > img{
+.align-img-right>img {
     align-self: end;
 }
 
-.ProjectDisplay > h2 {
+.ProjectDisplay>h2 {
     grid-area: header;
     padding: 0;
     margin: 0;
 }
 
-.ProjectDisplay > p {
+.ProjectDisplay>p {
     grid-area: description;
     padding: 0;
     margin: 0;
     justify-self: top;
 }
 
-.ProjectDisplay > img {
+.ProjectDisplay>img {
     grid-area: image;
     width: 400px;
 }
 
-.ProjectDisplay > .links {
+.ProjectDisplay>.links {
     margin-top: 10px;
     grid-area: links;
 }
 
-@media (max-width: 1116px){
-    .ProjectDisplay > img {
+@media (max-width: 1116px) {
+    .ProjectDisplay>img {
         width: 200px;
     }
+}
+
+@media (max-width: 650px) {
+
+    .ProjectDisplay {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        justify-content: top;
+        margin: 5px;
+        margin-top: 10px;
+    }
+
+    .ProjectDisplay>img {
+        width: 100%;
+        margin-top: 10px;
+        align-self: start;
+    }
+
+    .ProjectDisplay>h2 {
+        font-size: .8em;
+    }
+
+    .ProjectDisplay>p {
+        font-size: .5em;
+    }
+
+    .ProjectDisplay>.links {
+        font-size: .5em;
+    }
+
 }
