@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  /* --dark-color: #bb6700;
+  --dark-color-accent: #bb1600;
+  --light-color: #ffe993;
+  --midtone-color: #e0c55a; */
+  --dark-color: #350076;
+  --dark-color-accent: #0800ff;
+  --light-color: #eed9ff;
+  --midtone-color: #9094da;
+}
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--midtone-color);
+}
