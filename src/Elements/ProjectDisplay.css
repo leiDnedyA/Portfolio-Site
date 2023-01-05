@@ -77,15 +77,15 @@
     }
 
     .ProjectDisplay>h2 {
-        font-size: .8em;
+        font-size: 1.2em;
     }
 
     .ProjectDisplay>p {
-        font-size: .5em;
+        font-size: 1em;
     }
 
     .ProjectDisplay>.links {
-        font-size: .5em;
+        font-size: 1em;
     }
 
 }
