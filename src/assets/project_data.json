@@ -1,4 +1,11 @@
 [
+    
+    {
+        "title": "Racketscript Playground",
+        "imageSrc": "https://media0.giphy.com/media/EkDtoFROVHgbnriLwS/giphy.gif",
+        "description": "Playground for RacketScript, a Racket-based programming language that compiles to JavaScript. Both server-side and client-side code is written in RacketScript. I ported the site from Bootstrap 3 to Bootstrap 5 and all of the jQuery calls with pure JavaScript equivalents. I worked on this as part of my position as an undergrad researcher/software dev intern at UMass Boston.",
+        "links": ["http://play.racketscript.org/", "https://github.com/racketscript/racketscript-playground/"]
+    },
     {
         "title": "Interactive Exoplanet Predictor",
         "imageSrc": "https://i.giphy.com/media/sKIkl2ERPk7vKhhq5E/giphy.webp",
@@ -7,7 +14,7 @@
     },
     {
         "title": "HTML5 Platformer",
-        "imageSrc": "https://media1.giphy.com/media/FWwWy2flhYxNG6uvPl/giphy.gif?cid=790b7611e2299670a9239a3c3cc23e6ec5848189df7aa131&rid=giphy.gif&ct=g",
+        "imageSrc": "https://media1.giphy.com/media/FWwWy2flhYxNG6uvPl/giphy.gif",
         "description": "2D platformer game written in pure JavaScript using the HTML5 canvas API. I wrote the physics engine, controls, and particle rendering 100% from scratch.",
         "links": ["https://github.com/leiDnedyA/Mario-clone"]
     }
