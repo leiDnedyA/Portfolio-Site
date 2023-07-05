@@ -1,6 +1,12 @@
 [
     
     {
+        "title": "[WIP] Thrift Router",
+        "imageSrc": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDB2a3dnazVqNXN3djM5cTJqOTh1MGo0OTRxZ296bWVrbXEyb2kxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oyRWkmD2nEKaJW8s56/giphy.gif",
+        "description": "Web-app that gives users the perfect route to hit all the thrift stores in their area. Made for the web and optimized for mobile. Built with React, Vite.js, and Leaflet.",
+        "links": ["https://github.com/leiDnedyA/thrift-router"]
+    },
+    {
         "title": "Racketscript Playground",
         "imageSrc": "https://media0.giphy.com/media/EkDtoFROVHgbnriLwS/giphy.gif",
         "description": "Playground for RacketScript, a Racket-based programming language that compiles to JavaScript. Both server-side and client-side code is written in RacketScript. I ported the site from Bootstrap 3 to Bootstrap 5 and all of the jQuery calls with pure JavaScript equivalents. I worked on this as part of my position as an undergrad researcher/software dev intern at UMass Boston.",
