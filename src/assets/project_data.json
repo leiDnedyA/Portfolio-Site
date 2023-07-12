@@ -3,7 +3,7 @@
     {
         "title": "[WIP] Thrift Router",
         "imageSrc": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDB2a3dnazVqNXN3djM5cTJqOTh1MGo0OTRxZ296bWVrbXEyb2kxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oyRWkmD2nEKaJW8s56/giphy.gif",
-        "description": "Web-app that gives users the perfect route to hit all the thrift stores in their area. Made for the web and optimized for mobile. Built with React, Vite.js, and Leaflet.",
+        "description": "Web-app that gives users the perfect route to hit all the thrift stores in their area. Made for the web and optimized for mobile. Built with React and Leaflet.",
         "links": ["https://github.com/leiDnedyA/thrift-router"]
     },
     {
