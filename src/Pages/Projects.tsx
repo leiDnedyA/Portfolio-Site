@@ -19,7 +19,7 @@ export default (props: Props): JSX.Element => {
     return <div className="Projects">
         <div className="projects-header">
             <AutoTypingHeader className="projects-header-header" text="My Projects" />
-            <p className="projects-header-description">Here are some projects noteworthy projects I've made.</p>
+            <p className="projects-header-description">Here are some projects I've worked on.</p>
         </div>
         <div className="projects-container">
             {props.projectsList.map((p, i) => (

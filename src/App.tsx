@@ -6,7 +6,16 @@ import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
 import projectsJson from "./assets/project_data.json";
 import Footer from './Elements/Footer';
-
+/**
+ * TODO: Build the website from scratch again (eventually)
+ * 
+ * For now:
+ *  - Deploy to heroku
+ *  - Fix the problem with react router dom that gives 404 if the 
+ *    user tries to access a link other than the home route 
+ *    ex: works if user starts at "/" and then goes to /contact via navbar
+ *        doesn't work if user starts at "/contact"
+ */
 function App() {
   return (
     <div className="App">
