@@ -1,12 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Elements/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
-import SocialLinks from './Elements/SocialLinks';
 import projectsJson from "./assets/project_data.json";
 import Footer from './Elements/Footer';
 /**

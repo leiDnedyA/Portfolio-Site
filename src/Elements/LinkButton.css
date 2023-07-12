@@ -1,5 +1,5 @@
 
-.ResumeButton {
+.LinkButton {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.ResumeButton > button {
+.LinkButton > button {
   padding: 10px;
   font-weight: bold;
   background-color: var(--light-color);
@@ -18,6 +18,6 @@
   transition: background-color 200ms ease-out 50ms;
 }
 
-.ResumeButton > button:hover {
+.LinkButton > button:hover {
   background-color: var(--dark-color-accent);
 }
