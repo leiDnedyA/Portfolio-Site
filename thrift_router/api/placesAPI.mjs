@@ -15,9 +15,14 @@ dotenv.config();
  * @returns {{name: string, position: number[]}[]} objects representing found theift shops
  * 
  */
-async function thriftsWithinRadius(latLng, radius) {
+export async function thriftsWithinRadius(latLng, radius) {
     return fetch(`https://api.geoapify.com/v2/places?categories=commercial.second_hand,commercial.antiques&filter=circle:${latLng[1]},${latLng[0]},${radius}&bias=proximity:${latLng[1]},${latLng[0]}&limit=20&apiKey=${process.env.GEOAPIFY_KEY}`)
-        .then(res => res.json())
+        .then(res => {
+            if (res.status != 200) {
+                throw res.status;
+            }
+            return res.json();
+        })
         .then(result => {
             return result.features.reduce((accumulator, curr) => {
                 const currProps = curr.properties;
@@ -37,13 +42,23 @@ async function thriftsWithinRadius(latLng, radius) {
         })
 }
 
-const placesAPIRouter = new Router()
+export const placesAPIRouter = new Router();
 
 placesAPIRouter.use('/api/searchCircle/pos/:lat,:lon/rad/:radius', (req, res) => {
+    // const originalUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+    // console.log(originalUrl);
+
     thriftsWithinRadius([req.params.lat, req.params.lon], req.params.radius)
-    .then(result => {
-        res.send(result);
-    });
+        .then(result => {
+            res.send(result);
+        })
+        .catch(err => {
+            res.sendStatus(err);
+        });
 });
 
-export default placesAPIRouter;
+/**
+ * test urls:
+ * valid: http://localhost:3000/api/searchCircle/pos/35.689487,139.691706/rad/10000
+ * invalid: http://localhost:3000/api/searchCircle/pos/:35.6496,139.742/rad/:100
+ */
