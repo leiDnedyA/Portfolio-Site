@@ -4,16 +4,19 @@ import Model3D from '../Elements/3D/Model3D';
 import AutoTypingHeader from '../Elements/AutoTypingHeader';
 import SocialLinks from '../Elements/SocialLinks';
 import SkillsGrid from '../Elements/SkillsGrid';
+import './Home.css'
 
 export default (): JSX.Element => {
-    return <div className="home">
+    return <div className="home-container">
+        <div className="home">
         <div className="home-header">
             <AutoTypingHeader className="header home-header-header" text="Hi, I'm Ayden" />
             <p className="home-bio">I'm a developer and undergrad researcher based in Boston, MA.</p>
         </div>
-        <h2 className="subheader">My skills</h2>
+        <h2 className="subheader">My tech stack</h2>
         <div className="home-skills-grid">
             <SkillsGrid />
         </div>
+    </div>
     </div>
 }

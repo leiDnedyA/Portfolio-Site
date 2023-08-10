@@ -1,11 +1,9 @@
-
-
-/* Direct element styling */
-body {
+body, html {
   margin: 0;
   background-color: var(--light-color);
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 a {
@@ -70,69 +68,6 @@ a.no-bold {
 
 .subheader {
   font-weight: 600;
-}
-
-/* Styles related to the <Home /> page */
-.home {
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  grid-area: main;
-}
-
-.home-main {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  grid-area: main;
-}
-
-.home-header {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 50% 25% 25%;
-  grid-template-areas: 
-    "header header socials"
-    "bio bio bio"
-    "body body body";
-}
-
-.home-header-header {
-  grid-area: header;
-  font-size: 3em;
-  margin: 0;
-  margin-bottom: .25em;
-}
-
-@media (max-width: 1000px){
-  
-  .home {
-    width: 85%;
-  }
-
-  .home-header-header {
-    font-size: 2em;
-  }
-
-}
-
-.home-bio {
-  grid-area: bio;
-  margin: 0;
-}
-
-.home-socials {
-  grid-area: socials;
-  justify-self: right;
-  margin: 0;
-}
-
-.home-body-content {
-  grid-area: body;
 }
 
 .canvas-container {
