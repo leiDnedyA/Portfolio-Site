@@ -15,9 +15,9 @@ const ProjectDisplay = (props: Props): JSX.Element => {
         <p>{props.description}</p>
         <img src={props.imageSRC} />
         <div className="links">{props.links.map(
-            src => <Fragment>
-                <a href={src}>{src}</a>
-                <br/>
+            (src, i) => <Fragment key={`b${i}`}>
+                <a href={src} key={i}>{src}</a>
+                <br key={`a${i}`}/>
             </Fragment>
             )}</div>
     </div >

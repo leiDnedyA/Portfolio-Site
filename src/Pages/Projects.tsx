@@ -18,13 +18,13 @@ interface Props {
 export default (props: Props): JSX.Element => {
     return <div className="Projects">
         <div className="projects-header">
-            <AutoTypingHeader className="projects-header-header" text="My Projects" />
+            <AutoTypingHeader className="projects-header-header" text="My Projects" useDots={true}/>
             <p className="projects-header-description">Here are some projects I've worked on.</p>
         </div>
         <div className="projects-container">
             {props.projectsList.map((p, i) => (
                 <ProjectDisplay title={p.title} alignImageLeft={i%2 == 0} imageSRC={p.imageSrc}
-                    description={p.description} links={p.links} />
+                    description={p.description} links={p.links} key={i}/>
             ))}
         </div>
         <LinkButton text={<div>Check out my GitHub page! <SiGithub /></div>} link="https://github.com/leiDnedyA"/>
