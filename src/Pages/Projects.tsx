@@ -18,7 +18,7 @@ interface Props {
 export default (props: Props): JSX.Element => {
     return <div className="Projects">
         <div className="projects-header">
-            <AutoTypingHeader className="projects-header-header" text="My Projects" useDots={true}/>
+            <AutoTypingHeader className="projects-header-header" text="My Projects 💻 " useDots={true}/>
             <p className="projects-header-description">Here are some projects I've worked on.</p>
         </div>
         <div className="projects-container">
