@@ -7,7 +7,7 @@ import SkillsGrid from '../Elements/SkillsGrid';
 import './Home.css'
 import { useEffect, useState } from 'react';
 
-const TYPED_HEADER_BREAKPOINT = 380;
+const TYPED_HEADER_BREAKPOINT = 350;
 
 export default (): JSX.Element => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -19,7 +19,7 @@ export default (): JSX.Element => {
     return <div className="home-container">
         <div className="home">
         <div className="home-header">
-            <AutoTypingHeader className="header home-header-header" text="Hi, I'm Ayden" useDots={windowWidth > TYPED_HEADER_BREAKPOINT} />
+            <AutoTypingHeader className="header home-header-header" text="Hi, I'm Ayden 👋 " useDots={windowWidth > TYPED_HEADER_BREAKPOINT} />
             <p className="home-bio">I'm a developer and undergrad researcher in Boston, MA.</p>
         </div>
         <h2 className="subheader">My tech stack</h2>

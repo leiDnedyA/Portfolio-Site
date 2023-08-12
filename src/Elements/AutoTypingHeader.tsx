@@ -14,6 +14,8 @@ interface State {
     loadingDotsCount: number;
 }
 
+const SKIP_CHARS = new Set(['\uD83D']);
+
 export default class AutoTypingHeader extends React.Component<Props, State>{
 
     state = { textIndex: 0, currentText: '', finished: false, loadingDotsCount: 0}; //current index that the text is being typed to
@@ -34,7 +36,18 @@ export default class AutoTypingHeader extends React.Component<Props, State>{
         const updateTypedText = () => {
             
             if (this.state.textIndex < fullText.length) {
-                this.setState({ textIndex: this.state.textIndex + 1 })
+                console.log(SKIP_CHARS.has(this.props.text[this.state.textIndex + 1]), this.props.text[this.state.textIndex]);
+                let stateChanged = false;
+                if (this.state.textIndex < fullText.length - 1) {
+                    if (SKIP_CHARS.has(fullText[this.state.textIndex])) {
+                        this.setState({ textIndex: this.state.textIndex + 2 })
+                        stateChanged = true;
+                    }
+                }
+                if (!stateChanged) {
+                    this.setState({ textIndex: this.state.textIndex + 1 })
+                }
+                
             }
             if (this.state.textIndex == fullText.length) {
                 this.setState({ finished: true });
