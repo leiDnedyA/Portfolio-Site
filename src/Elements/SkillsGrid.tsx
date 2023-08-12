@@ -1,5 +1,5 @@
 import './SkillsGrid.css';
-import {SiCss3, SiGit, SiGithub, SiGooglechrome, SiHtml5, SiJavascript, SiNodedotjs, SiPython, SiReact, SiTypescript, SiVisualstudiocode} from 'react-icons/si'
+import {SiCss3, SiGit, SiGithub, SiGooglechrome, SiHtml5, SiJavascript, SiMysql, SiNodedotjs, SiPostgresql, SiPython, SiReact, SiSequelize, SiSqlite, SiTypescript, SiVisualstudiocode} from 'react-icons/si'
 
 const SkillsGrid = (): JSX.Element => {
 
@@ -33,8 +33,8 @@ const SkillsGrid = (): JSX.Element => {
             elem: <SiPython />
         },
         {
-            label: 'Extensions',
-            elem: <SiGooglechrome />
+            label: 'SQLite',
+            elem: <><SiSqlite/></>
         },
         {
             label: 'GitHub',

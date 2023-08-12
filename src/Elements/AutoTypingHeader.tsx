@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react"
 
 interface Props{
     className?: string;
+    useDots?: boolean;
     text: string;
 }
 
@@ -58,7 +59,7 @@ export default class AutoTypingHeader extends React.Component<Props, State>{
         this.interval = setInterval(() => {
             if (!this.state.finished){
                 updateTypedText();
-            }else{
+            }else if (this.props.useDots){
                 clearInterval(this.interval);
                 updateDots();
                 this.interval = setInterval(updateDots, this.dotsDelay);

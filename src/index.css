@@ -10,7 +10,8 @@ body {
   --midtone-color: #e0c55a; */
   --dark-color: #350076;
   --dark-color-accent: #0800ff;
-  --light-color: #eed9ff;
+  /* --light-color: #eed9ff; */
+  --light-color: white;
   --midtone-color: #9094da;
 }
 

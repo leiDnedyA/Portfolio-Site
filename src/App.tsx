@@ -10,6 +10,8 @@ import Footer from './Elements/Footer';
  * TODO: Build the website from scratch again (eventually)
  * 
  * For now:
+ *  - Update AutoTypingHeader component to be function component and 
+ *    use useDots prop correctly.
  *  - Deploy to heroku
  *  - Fix the problem with react router dom that gives 404 if the 
  *    user tries to access a link other than the home route 
