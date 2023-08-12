@@ -20,7 +20,7 @@ export default (): JSX.Element => {
         <div className="home">
         <div className="home-header">
             <AutoTypingHeader className="header home-header-header" text="Hi, I'm Ayden" useDots={windowWidth > TYPED_HEADER_BREAKPOINT} />
-            <p className="home-bio">I'm a developer and undergrad researcher based in Boston, MA.</p>
+            <p className="home-bio">I'm a developer and undergrad researcher in Boston, MA.</p>
         </div>
         <h2 className="subheader">My tech stack</h2>
         <div className="home-skills-grid">
