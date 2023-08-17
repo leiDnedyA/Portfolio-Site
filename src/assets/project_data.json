@@ -1,8 +1,8 @@
 [
     
     {
-        "title": "[WIP] Twotter (Twitter clone)",
-        "imageSrc": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGY5M3p6cWVja3J6NndxbjVsM2N1N3E0aG5seWsybGhnYmpyZXFtYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AGKi9nCzxIytiK2mX6/giphy.gif",
+        "title": "Twotter",
+        "imageSrc": "https://i.giphy.com/media/snRzPq5Xq2SOphqtlt/giphy.webp",
         "description": "Considering the questionable management decisions at X (formerly known as Twitter), I figured I'd jump into the game. User authentication via Google auth API, Node.js, Express, SQlite, and Sequelize on the backend, React and TypeScript on the frontend.",
         "links": ["https://github.com/leiDnedyA/twitter-clone"]
     },
