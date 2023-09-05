@@ -1,0 +1,41 @@
+[
+    
+    {
+        "title": "[WIP] Twotter (Twitter clone)",
+        "imageSrc": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGY5M3p6cWVja3J6NndxbjVsM2N1N3E0aG5seWsybGhnYmpyZXFtYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AGKi9nCzxIytiK2mX6/giphy.gif",
+        "description": "Considering the questionable management decisions at X (formerly known as Twitter), I figured I'd jump into the game. User authentication via Google auth API, Node.js, Express, SQlite, and Sequelize on the backend, React and TypeScript on the frontend.",
+        "links": ["https://github.com/leiDnedyA/twitter-clone"]
+    },
+    {
+        "title": "Thrift Router",
+        "imageSrc": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDB2a3dnazVqNXN3djM5cTJqOTh1MGo0OTRxZ296bWVrbXEyb2kxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oyRWkmD2nEKaJW8s56/giphy.gif",
+        "description": "Web-app that gives users the perfect route to hit all the thrift stores in their area. Made for the web and optimized for mobile. Built with React and Leaflet.",
+        "links": ["https://aydendiel.me/thrift-router", "https://github.com/leiDnedyA/thrift-router"]
+    },
+    {
+        "title": "Racketscript Playground",
+        "imageSrc": "https://media0.giphy.com/media/EkDtoFROVHgbnriLwS/giphy.gif",
+        "description": "Playground for RacketScript, a Racket-based programming language that compiles to JavaScript. Both server-side and client-side code is written in RacketScript. I ported the site from Bootstrap 3 to Bootstrap 5 and all of the jQuery calls with pure JavaScript equivalents. I worked on this as part of my position as an undergrad researcher/software dev intern at UMass Boston.",
+        "links": ["http://play.racketscript.org/", "https://github.com/racketscript/racketscript-playground/"]
+    },
+    {
+        "title": "Fullstack Blog Web-App",
+        "imageSrc": "https://media3.giphy.com/media/5J7Kry5T8qhq6oJWqM/giphy.gif?cid=790b76115b2ecbd756e93dc443f9d5e1b4db19e9cef1ec66&rid=giphy.gif&ct=g",
+        "description": "Blog app which allows readers to browse through posts stored in a Google Firebase Database, and allows admins to log in, write new posts, and delete old posts. The app's frontend is written in React.js using create-react-app, the backend is written in Node.js, and I used Google Firebase for the database.",
+        "links": [
+            "https://github.com/leiDnedyA/React-Blog"
+        ]
+    },
+    {
+        "title": "Interactive Exoplanet Predictor",
+        "imageSrc": "https://i.giphy.com/media/sKIkl2ERPk7vKhhq5E/giphy.webp",
+        "description": "Interactive Exoplanet Predictor uses machine learning to predict the number of exoplanets that a star would have based on several variables, including radius, surface gravity, age, temperature, etc. A 3D model of the predicted star system is generated based on each new set of inputs.",
+        "links": ["https://github.com/leiDnedyA/interactive-exoplanet-predictor"]
+    },
+    {
+        "title": "HTML5 Platformer",
+        "imageSrc": "https://media1.giphy.com/media/FWwWy2flhYxNG6uvPl/giphy.gif",
+        "description": "2D platformer game written in pure JavaScript using the HTML5 canvas API. I wrote the physics engine, controls, and particle rendering 100% from scratch.",
+        "links": ["https://github.com/leiDnedyA/Mario-clone"]
+    }
+]

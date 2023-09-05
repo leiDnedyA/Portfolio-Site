@@ -6,18 +6,19 @@ import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
 import projectsJson from "./assets/project_data.json";
 import Footer from './Elements/Footer';
+
 /**
- * TODO: Build the website from scratch again (eventually)
+ * TODO
  * 
- * For now:
- *  - Update AutoTypingHeader component to be function component and 
- *    use useDots prop correctly.
- *  - Deploy to heroku
- *  - Fix the problem with react router dom that gives 404 if the 
- *    user tries to access a link other than the home route 
- *    ex: works if user starts at "/" and then goes to /contact via navbar
- *        doesn't work if user starts at "/contact"
+ *  - update outdated react components to use modern features
+ *  - refactor projects page and backend to request JSON from server
+ *    instead of es6 import
+ *  - update contacts page to request router from backend
+ *  - [CONFIG] add login, UI, file uploads
+ *  - Migrate away from using create-react-app
+ * 
  */
+
 function App() {
   return (
     <div className="App">
