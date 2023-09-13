@@ -1,5 +1,5 @@
 import './SkillsGrid.css';
-import {SiCss3, SiGit, SiGithub, SiGooglechrome, SiHtml5, SiJavascript, SiMysql, SiNodedotjs, SiPostgresql, SiPython, SiReact, SiSequelize, SiSqlite, SiTypescript, SiVisualstudiocode} from 'react-icons/si'
+import {SiCss3, SiGithub, SiHtml5, SiJavascript, SiNodedotjs, SiPython, SiReact, SiTypescript, SiFlask} from 'react-icons/si'
 
 const SkillsGrid = (): JSX.Element => {
 
@@ -33,8 +33,8 @@ const SkillsGrid = (): JSX.Element => {
             elem: <SiPython />
         },
         {
-            label: 'SQLite',
-            elem: <><SiSqlite/></>
+            label: 'Flask',
+            elem: <SiFlask/>
         },
         {
             label: 'GitHub',
@@ -45,11 +45,11 @@ const SkillsGrid = (): JSX.Element => {
     ]
 
     return <div className="SkillsGrid">
-        {skills.map(skill=>{
-            return <div className="skill-grid-item">
-                <div className="skill-container hover-animation">
-                    <div className="skill-grid-icon">{skill.elem}</div>
-                    <p className="skill-grid-label">{skill.label}</p>
+        {skills.map((skill, i)=>{
+            return <div className="skill-grid-item" key={`item${i}`}>
+                <div className="skill-container hover-animation" key={`container${i}`}>
+                    <div className="skill-grid-icon" key={`icon${i}`}>{skill.elem}</div>
+                    <p className="skill-grid-label" key={`label${i}`}>{skill.label}</p>
                 </div>
             </div>;
         })}

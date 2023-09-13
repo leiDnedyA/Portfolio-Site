@@ -36,7 +36,6 @@ export default class AutoTypingHeader extends React.Component<Props, State>{
         const updateTypedText = () => {
             
             if (this.state.textIndex < fullText.length) {
-                console.log(SKIP_CHARS.has(this.props.text[this.state.textIndex + 1]), this.props.text[this.state.textIndex]);
                 let stateChanged = false;
                 if (this.state.textIndex < fullText.length - 1) {
                     if (SKIP_CHARS.has(fullText[this.state.textIndex])) {
