@@ -51,6 +51,7 @@
 
 .home-bio {
     grid-area: bio;
+    font-size: 1.3em;
     margin: 0;
 }
 
